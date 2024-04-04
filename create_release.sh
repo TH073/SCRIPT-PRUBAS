@@ -2,7 +2,7 @@
 
 #create_release.sh $GITHUB_TOKEN $REPO_NAME $USER
 
-REPO_OWNER="nbn23dev"
+REPO_OWNER="NBN23dev"
 REPO_NAME=$2
 GITHUB_TOKEN=$1
 USER=$3
