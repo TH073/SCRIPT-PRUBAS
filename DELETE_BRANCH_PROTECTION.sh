@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_OWNER="nbn23dev"
+REPO_OWNER="NBN23dev"
 GITHUB_TOKEN=$1
 archivo="./repos/gcr.txt"
 BRANCH=$2
@@ -14,11 +14,12 @@ fi
 #Bucle para subir desproteger todos los repositorios GCR.
 
 while IFS= read -r line;
-    do 
-        curl -L \
+    do
+    
+         curl -L \
             -X DELETE \
             -H "Accept: application/vnd.github+json" \
              -H "Authorization: Bearer $GITHUB_TOKEN " \
              -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/$REPO_OWNER/${line%?}/branches/$BRANCH/protection/enforce_admins
+            "https://api.github.com/repos/$REPO_OWNER/${line%?}/branches/$BRANCH/protection/enforce_admins" 
     done < "$archivo"

@@ -34,3 +34,9 @@ gcr-store-manager
 gcr-subscriber
 gcr-sync-last-next-matches
 gcr-sync-queue-manager
+gcr-event-store-manager
+gcr-store-manager
+gcr-basketbg-service
+
+
+
